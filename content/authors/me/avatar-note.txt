@@ -1,0 +1,5 @@
+To add your profile photo:
+1. Replace this file with an image named "avatar.jpg" or "avatar.png"
+2. Recommended size: 512x512 pixels
+3. Use a professional headshot photo
+4. Square crop works best
