@@ -41,3 +41,290 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* ==========================================================================
+   MINIMALIST CUSTOM STYLES
+   Clean, elegant refinements for a sophisticated academic look
+   ========================================================================== */
+
+/* Import Inter font for refined typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Body refinements */
+body {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Refined headings - Smaller, elegant */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+h3 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Refined paragraph spacing - Tighter */
+p {
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+/* Elegant links - underline on hover */
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-bottom-color: currentColor;
+  }
+}
+
+/* Sidebar refinements - Compact */
+.sidebar {
+  p, li {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+}
+
+.author__name {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.15rem;
+}
+
+.author__bio {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  line-height: 1.35;
+}
+
+.author__urls {
+  li a {
+    font-size: 0.75rem;
+    padding: 0.25rem 0;
+  }
+}
+
+/* Masthead refinements - Compact */
+.masthead {
+  border-bottom: 1px solid var(--global-border-color);
+
+  &__inner-wrap {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.site-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.greedy-nav {
+  a {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .visible-links a {
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+/* Page title refinements */
+.page__title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* Archive/list refinements */
+.archive__item-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+
+  a {
+    border-bottom: none;
+
+    &:hover {
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+.archive__item-excerpt {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  line-height: 1.35;
+}
+
+/* Publication list refinements */
+.list__item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Publication number styling */
+.pub-number {
+  font-weight: 500;
+  color: var(--global-text-color-light);
+  margin-right: 0.5em;
+  font-size: 0.9em;
+}
+
+/* Project card image styling */
+.archive__item-teaser img,
+.archive__item-excerpt img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+  filter: grayscale(30%);
+  transition: filter 0.2s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+/* Project page featured image */
+.page__content > p:first-of-type img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.page__content > p:first-of-type em {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 1.5rem;
+}
+
+/* Tighter list spacing */
+ul, ol {
+  li {
+    margin-bottom: 0.25em;
+    line-height: 1.4;
+  }
+}
+
+/* Footer refinements */
+.page__footer {
+  border-top: 1px solid var(--global-border-color);
+  font-size: 0.7rem;
+  padding: 1.5rem 0;
+
+  footer {
+    max-width: none;
+  }
+}
+
+/* Button refinements */
+.btn {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0;
+  border: 1px solid var(--global-text-color);
+  background: transparent;
+  color: var(--global-text-color);
+
+  &:hover {
+    background: var(--global-text-color);
+    color: var(--global-bg-color);
+  }
+}
+
+/* Code blocks */
+pre, code {
+  font-size: 0.75rem;
+  border-radius: 0;
+}
+
+/* Remove box shadows globally */
+*, *::before, *::after {
+  box-shadow: none !important;
+}
+
+/* Clean image styling */
+img {
+  border-radius: 0;
+}
+
+/* CV page refinements */
+.cv-json {
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+}
+
+/* Social icons - simplified */
+.social-icons {
+  .fa, .fab, .fas, .svg-inline--fa {
+    font-size: 0.85rem;
+  }
+}
+
+/* Reduce visual noise */
+.page__meta {
+  font-size: 0.7rem;
+  color: var(--global-text-color-light);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Clean table styling */
+table {
+  border: none;
+
+  th, td {
+    border: none;
+    border-bottom: 1px solid var(--global-border-color);
+    padding: 0.75rem 0;
+  }
+
+  th {
+    font-weight: 500;
+  }
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 2px solid var(--global-text-color);
+  padding-left: 1.5rem;
+  font-style: normal;
+  color: var(--global-text-color-light);
+}

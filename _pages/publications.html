@@ -11,26 +11,52 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<!-- Numbered publications list -->
+{% assign pub_count = site.publications | size %}
+
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
+    {% assign cat_pubs = site.publications | where: "category", category[0] | sort: "date" | reverse %}
+    {% for post in cat_pubs %}
       {% unless title_shown %}
         <h2>{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single.html %}
+      <div class="list__item">
+        <article class="archive__item">
+          <h2 class="archive__item-title">
+            <span class="pub-number">[{{ pub_count }}]</span>
+            <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+          </h2>
+          {% if post.venue and post.date %}
+            <p class="archive__item-excerpt"><i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}</p>
+          {% endif %}
+          {% if post.excerpt %}
+            <p class="archive__item-excerpt">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+          {% endif %}
+        </article>
+      </div>
+      {% assign pub_count = pub_count | minus: 1 %}
     {% endfor %}
   {% endfor %}
 {% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+  {% assign sorted_pubs = site.publications | sort: "date" | reverse %}
+  {% for post in sorted_pubs %}
+    <div class="list__item">
+      <article class="archive__item">
+        <h2 class="archive__item-title">
+          <span class="pub-number">[{{ pub_count }}]</span>
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+        </h2>
+        {% if post.venue and post.date %}
+          <p class="archive__item-excerpt"><i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}</p>
+        {% endif %}
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        {% endif %}
+      </article>
+    </div>
+    {% assign pub_count = pub_count | minus: 1 %}
   {% endfor %}
 {% endif %}
-
-
-

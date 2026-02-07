@@ -1,152 +1,269 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Yongfei (Felix) Deng",
+    "email": "ydeng23@ncsu.edu",
+    "phone": "(+1) 919-616-3520",
+    "website": "https://felixytang.github.io/academic-website",
+    "summary": "Postdoctoral Researcher in Physical Oceanography at North Carolina State University",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Raleigh",
       "countryCode": "US",
-      "region": ""
+      "region": "NC"
     },
     "profiles": [
       {
         "network": "Google Scholar",
         "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://scholar.google.com/citations?user=MQitERsAAAAJ&hl=en"
       },
       {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "network": "LinkedIn",
+        "username": "felix-deng",
+        "url": "https://linkedin.com/in/felix-deng"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "felixytang",
+        "url": "https://github.com/felixytang"
+      },
+      {
+        "network": "ResearchGate",
+        "username": "Yongfei-Deng",
+        "url": "https://www.researchgate.net/profile/Yongfei-Deng"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "North Carolina State University",
+      "position": "Postdoctoral Researcher",
+      "startDate": "2024-10",
+      "endDate": "Present",
+      "summary": "Conducting advanced research in physical oceanography with a focus on data assimilation techniques. Using numerical models and ML/AI to study eddies in Gulf of Mexico and water mass transformation in Caribbean Sea."
+    },
+    {
+      "company": "University of New South Wales",
+      "position": "Visiting and Postdoctoral Researcher",
+      "startDate": "2022-09",
+      "endDate": "2024-09",
+      "summary": "Conducted numerical modeling studies on sediment and physical dynamics in Batemans Bay, NSW. Analyzed impacts of regional climate change on sediment transport and hydrodynamics."
+    },
+    {
+      "company": "Southern University of Science and Technology",
+      "position": "Ph.D. Researcher",
+      "startDate": "2019-08",
+      "endDate": "2023-06",
+      "summary": "Investigated low-frequency variability of shelf circulation and cross-shelf water exchange in the Northern South China Sea using ROMS modeling and observational data."
+    },
+    {
+      "company": "Shanghai Ocean University",
+      "position": "Master's Researcher",
+      "startDate": "2016-04",
+      "endDate": "2019-05",
+      "summary": "Explored air-ice-sea dynamics in the Arctic Ocean using in situ data and FVCOM model output. Focused on Bering Strait, Chukchi Sea, Beaufort Sea, and Canadian Arctic Archipelago."
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "Southern University of Science and Technology",
+      "area": "Ph.D. in Physical Oceanography",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "startDate": "2019-09",
+      "endDate": "2023-06",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "Shanghai Ocean University",
+      "area": "M.Sc. in Marine Science",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
+      "startDate": "2016-09",
+      "endDate": "2019-06",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
+      "institution": "Guangdong University of Finance and Economics",
+      "area": "B.Sc. in Resources, Environment, and Urban-Rural Planning Management",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "startDate": "2012-08",
+      "endDate": "2016-06",
       "gpa": null,
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
+  "skills": [
+    {
+      "name": "Programming",
+      "keywords": ["Python", "MATLAB", "Fortran", "NCL", "LaTeX"]
+    },
+    {
+      "name": "Systems",
+      "keywords": ["Linux/Unix", "Shell", "HPC"]
+    },
+    {
+      "name": "Ocean Modeling",
+      "keywords": ["ROMS", "FVCOM", "ENKF-c", "Data Assimilation", "AI/ML/DL"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Mandarin",
+      "fluency": "Native"
+    },
+    {
+      "language": "Cantonese",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Physical Oceanography",
+      "keywords": ["Multi-scale ocean dynamics", "Air-sea-ice interactions", "Cross-shelf water exchange"]
+    },
+    {
+      "name": "Numerical Modeling",
+      "keywords": ["Data assimilation", "Climate dynamics", "Coastal systems"]
+    }
+  ],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Estuarine circulation and bay-shelf exchange under river and wave forcing in Batemans Bay, New South Wales, Australia",
+      "publisher": "Journal of Geophysical Research: Oceans",
+      "releaseDate": "2025",
+      "website": "",
+      "summary": "Under review"
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "Low-frequency water movement in a semi-enclosed embayment",
+      "publisher": "Estuarine, Coastal and Shelf Science",
+      "releaseDate": "2025",
+      "website": "",
+      "summary": "Under review"
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
+      "name": "Climatic Controls on the Interannual Variability of Shelf Circulation in the Northern South China Sea",
+      "publisher": "Journal of Geophysical Research: Oceans",
+      "releaseDate": "2022",
+      "website": "",
+      "summary": "Volume 127, Issue 7"
     },
     {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Progress on Circulation Dynamics in the East China Sea and Southern Yellow Sea",
+      "publisher": "Progress in Oceanography",
+      "releaseDate": "2021",
+      "website": "",
+      "summary": "Volume 193, 102553"
+    },
+    {
+      "name": "Progress of studies on circulation dynamics in the East China Sea: The Kuroshio exchanges with the shelf currents",
+      "publisher": "Frontiers in Marine Science",
+      "releaseDate": "2021",
+      "website": "",
+      "summary": "Volume 8, 620910"
+    },
+    {
+      "name": "Advances on coastal and estuarine circulations around the Changjiang Estuary in the recent decades (2000-2020)",
+      "publisher": "Frontiers in Marine Science",
+      "releaseDate": "2021",
+      "website": "",
+      "summary": "Volume 8, 615929"
+    },
+    {
+      "name": "Main Characteristics and Influence Factors of the Pacific Inflow in the Region of Bering Strait: A Review",
+      "publisher": "Chinese Journal of Polar Research",
+      "releaseDate": "2020",
+      "website": "",
+      "summary": "Volume 32(2), 151-163 (In Chinese with English abstract)"
+    },
+    {
+      "name": "Seasonal and interannual variability of Bering Strait Throughflow from AO-FVCOM and observation",
+      "publisher": "Journal of Ocean University of China",
+      "releaseDate": "2019",
+      "website": "",
+      "summary": "Volume 18(3), 615-625"
+    },
+    {
+      "name": "The temporal-spatial variability of Chukchi sea ice area under the influence of Bering Strait Throughflow",
+      "publisher": "Chinese Journal of Polar Research",
+      "releaseDate": "2019",
+      "website": "",
+      "summary": "Volume 31(4), 383-392 (In Chinese with English abstract)"
     }
   ],
   "presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
+      "name": "2nd Coastal Resilience Workshop",
+      "event": "UNSW Canberra",
+      "date": "2024-04",
+      "location": "Canberra, ACT, Australia",
       "description": ""
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
+      "name": "1st Coastal Resilience Workshop",
+      "event": "UNSW Canberra",
+      "date": "2023-11",
+      "location": "Canberra, ACT, Australia",
       "description": ""
     },
     {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
+      "name": "6th Conference on Earth Science",
+      "event": "Tongji University",
+      "date": "2021-07",
+      "location": "Shanghai, China",
+      "description": "Poster presentation"
     },
     {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "name": "Second China Polar Youth Forum",
+      "event": "University of Science and Technology of China",
+      "date": "2019-05",
+      "location": "China",
+      "description": "Poster presentation; First Prize"
+    },
+    {
+      "name": "China Symposium on Polar Science",
+      "event": "Xiamen University",
+      "date": "2018-10",
+      "location": "Xiamen, China",
+      "description": "Poster presentation"
     }
   ],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
+      "course": "Ocean Circulation and Mixing",
+      "institution": "School of Science, UNSW Canberra",
+      "date": "2023-2024",
+      "role": "Casual Academic",
+      "description": "Demonstrated lab experiments and graded students' lab reports"
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "course": "Australian Waters",
+      "institution": "School of Science, UNSW Canberra",
+      "date": "2023-2024",
+      "role": "Casual Academic",
+      "description": "Demonstrated lab experiments and graded students' lab reports"
+    },
+    {
+      "course": "Ocean Field School",
+      "institution": "UNSW Canberra",
+      "date": "2023-2024",
+      "role": "Field Instructor",
+      "description": "Assisted in conducting tasks and surveys at Batemans Bay"
+    },
+    {
+      "course": "Introduction to Oceanography (Summer School)",
+      "institution": "UNSW Canberra",
+      "date": "2023-2024",
+      "role": "Instructor",
+      "description": "Designed and demonstrated lab sessions and quizzes"
     }
   ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "portfolio": []
 }
