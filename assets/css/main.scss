@@ -225,7 +225,7 @@ a {
 
 .page__content > p:first-of-type em {
   display: block;
-  font-size: 0.7rem;
+  font-size: 1.5rem;
   color: var(--global-text-color-light);
   margin-bottom: 1.5rem;
 }
@@ -327,4 +327,9 @@ blockquote {
   padding-left: 1.5rem;
   font-style: normal;
   color: var(--global-text-color-light);
+}
+
+/* Page body text - smaller */
+.page__content p {
+  font-size: 1rem;
 }
