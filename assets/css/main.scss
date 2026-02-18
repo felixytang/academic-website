@@ -43,14 +43,17 @@
 ;
 
 /* ==========================================================================
-   MINIMALIST CUSTOM STYLES
-   Clean, elegant refinements for a sophisticated academic look
+   ELEGANT ACADEMIC STYLES
+   Sophisticated refinements with navy-teal accent
    ========================================================================== */
 
-/* Import Inter font for refined typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+/* Import fonts: Inter (body) + Source Serif 4 (headings) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
 
-/* Body refinements */
+/* ==========================================================================
+   BODY REFINEMENTS
+   ========================================================================== */
+
 body {
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -58,19 +61,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Refined headings - Smaller, elegant */
+/* ==========================================================================
+   TYPOGRAPHY — Headings
+   ========================================================================== */
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   padding-bottom: 0.4rem;
@@ -78,28 +85,119 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 1.5rem;
 }
 
-/* Refined paragraph spacing - Tighter */
+/* ==========================================================================
+   TYPOGRAPHY — Body text
+   ========================================================================== */
+
 p {
-  line-height: 1.4;
+  line-height: 1.65;
   margin-bottom: 1em;
 }
 
-/* Elegant links - underline on hover */
-a {
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease;
+.page__content p {
+  font-size: 1rem;
+  max-width: 70ch;
+}
 
-  &:hover {
-    border-bottom-color: currentColor;
+/* Lead paragraph — first paragraph on homepage */
+.page__content > p:first-of-type {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Tighter list spacing */
+ul, ol {
+  li {
+    margin-bottom: 0.25em;
+    line-height: 1.5;
   }
 }
 
-/* Sidebar refinements - Compact */
+/* ==========================================================================
+   LINKS — Animated underline
+   ========================================================================== */
+
+a {
+  color: var(--global-link-color);
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.25s ease-out;
+
+  &:hover {
+    color: var(--global-link-color-hover);
+  }
+}
+
+/* Content links — animated underline via background-image */
+.page__content a:not(.btn):not(.archive__item-title a) {
+  text-decoration: none;
+  background-image: linear-gradient(var(--global-accent-color), var(--global-accent-color));
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease-out, color 0.25s ease-out;
+
+  &:hover {
+    background-size: 100% 2px;
+    color: var(--global-link-color-hover);
+  }
+}
+
+/* ==========================================================================
+   SELECTIVE SHADOW REMOVAL (replaces global * box-shadow: none)
+   ========================================================================== */
+
+.toc,
+.hidden-links,
+.author__urls {
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   NAVIGATION — Frosted glass
+   ========================================================================== */
+
+.masthead {
+  border-bottom: 1px solid var(--global-border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+
+  html[data-theme="dark"] & {
+    background: rgba(10, 10, 10, 0.85);
+  }
+
+  &__inner-wrap {
+    padding: 0.65rem 1.5rem;
+  }
+}
+
+.site-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.greedy-nav {
+  a {
+    font-size: 0.82rem;
+    font-weight: 400;
+  }
+
+  .visible-links a {
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+/* ==========================================================================
+   SIDEBAR — Author profile
+   ========================================================================== */
+
 .sidebar {
   p, li {
     font-size: 0.8rem;
@@ -108,59 +206,58 @@ a {
 }
 
 .author__name {
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: 0.15rem;
 }
 
 .author__bio {
-  font-size: 0.8rem;
+  font-style: italic;
+  font-size: 0.82rem;
   color: var(--global-text-color-light);
   line-height: 1.35;
+}
+
+.author__avatar img {
+  border: 2px solid var(--global-border-color);
+  border-radius: 50%;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .author__urls {
   li a {
     font-size: 0.75rem;
     padding: 0.25rem 0;
+    transition: color 0.25s ease-out;
+
+    &:hover {
+      color: var(--global-accent-color);
+    }
   }
 }
 
-/* Masthead refinements - Compact */
-.masthead {
-  border-bottom: 1px solid var(--global-border-color);
+/* ==========================================================================
+   PAGE TITLE
+   ========================================================================== */
 
-  &__inner-wrap {
-    padding: 0.5rem 1rem;
-  }
-}
-
-.site-title {
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-
-.greedy-nav {
-  a {
-    font-size: 0.8rem;
-    font-weight: 400;
-  }
-
-  .visible-links a {
-    padding: 0.4rem 0.6rem;
-  }
-}
-
-/* Page title refinements */
 .page__title {
-  font-size: 1.35rem;
-  font-weight: 500;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
-/* Archive/list refinements */
+/* ==========================================================================
+   ARCHIVE / LIST ITEMS
+   ========================================================================== */
+
 .archive__item-title {
   font-size: 0.9rem;
   font-weight: 500;
@@ -168,9 +265,11 @@ a {
 
   a {
     border-bottom: none;
+    background-image: none;
+    transition: color 0.25s ease-out;
 
     &:hover {
-      color: var(--global-text-color-light);
+      color: var(--global-accent-color);
     }
   }
 }
@@ -181,10 +280,13 @@ a {
   line-height: 1.35;
 }
 
-/* Publication list refinements */
+/* ==========================================================================
+   PUBLICATION LIST
+   ========================================================================== */
+
 .list__item {
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  padding: 1.25rem 0;
   border-bottom: 1px solid var(--global-border-color);
 
   &:last-child {
@@ -192,26 +294,32 @@ a {
   }
 }
 
-/* Publication number styling */
 .pub-number {
+  font-family: "Source Serif 4", Georgia, serif;
   font-weight: 500;
-  color: var(--global-text-color-light);
+  color: var(--global-accent-color);
   margin-right: 0.5em;
   font-size: 0.9em;
+  opacity: 0.7;
 }
 
-/* Project card image styling */
+/* ==========================================================================
+   PROJECT CARDS — Full color, hover lift
+   ========================================================================== */
+
 .archive__item-teaser img,
 .archive__item-excerpt img {
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
   margin-top: 0.5rem;
-  filter: grayscale(30%);
-  transition: filter 0.2s ease;
+  filter: none;
+  border-radius: 3px;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
 
   &:hover {
-    filter: grayscale(0%);
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -230,34 +338,19 @@ a {
   margin-bottom: 1.5rem;
 }
 
-/* Tighter list spacing */
-ul, ol {
-  li {
-    margin-bottom: 0.25em;
-    line-height: 1.4;
-  }
-}
+/* ==========================================================================
+   BUTTONS — Keep invert style, refine
+   ========================================================================== */
 
-/* Footer refinements */
-.page__footer {
-  border-top: 1px solid var(--global-border-color);
-  font-size: 0.7rem;
-  padding: 1.5rem 0;
-
-  footer {
-    max-width: none;
-  }
-}
-
-/* Button refinements */
 .btn {
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.4rem 0.8rem;
-  border-radius: 0;
+  border-radius: 3px;
   border: 1px solid var(--global-text-color);
   background: transparent;
   color: var(--global-text-color);
+  transition: all 0.25s ease-out;
 
   &:hover {
     background: var(--global-text-color);
@@ -265,48 +358,23 @@ ul, ol {
   }
 }
 
-/* Code blocks */
-pre, code {
-  font-size: 0.75rem;
-  border-radius: 0;
-}
+/* ==========================================================================
+   BLOCKQUOTES — Accent border + serif italic
+   ========================================================================== */
 
-/* Remove box shadows globally */
-*, *::before, *::after {
-  box-shadow: none !important;
-}
-
-/* Clean image styling */
-img {
-  border-radius: 0;
-}
-
-/* CV page refinements */
-.cv-json {
-  h2 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-  }
-}
-
-/* Social icons - simplified */
-.social-icons {
-  .fa, .fab, .fas, .svg-inline--fa {
-    font-size: 0.85rem;
-  }
-}
-
-/* Reduce visual noise */
-.page__meta {
-  font-size: 0.7rem;
+blockquote {
+  border-left: 3px solid var(--global-accent-color);
+  padding-left: 1.5rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-style: italic;
   color: var(--global-text-color-light);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  font-size: 1.05rem;
 }
 
-/* Clean table styling */
+/* ==========================================================================
+   TABLES — Refined
+   ========================================================================== */
+
 table {
   border: none;
 
@@ -318,18 +386,142 @@ table {
 
   th {
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--global-text-color-light);
+    font-size: 0.85em;
+  }
+
+  tr:hover td {
+    background-color: var(--global-code-background-color);
   }
 }
 
-/* Blockquote styling */
-blockquote {
-  border-left: 2px solid var(--global-text-color);
-  padding-left: 1.5rem;
-  font-style: normal;
+/* ==========================================================================
+   CODE BLOCKS — Subtle refinement
+   ========================================================================== */
+
+pre, code {
+  font-size: 0.78rem;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   FOOTER — Tagline + refinement
+   ========================================================================== */
+
+.page__footer {
+  border-top: 1px solid var(--global-border-color);
+  font-size: 0.72rem;
+  padding: 2rem 0;
+
+  footer {
+    max-width: none;
+  }
+
+  a {
+    transition: color 0.25s ease-out;
+
+    &:hover {
+      color: var(--global-accent-color);
+    }
+  }
+}
+
+.page__footer-tagline {
+  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
   color: var(--global-text-color-light);
 }
 
-/* Page body text - smaller */
-.page__content p {
-  font-size: 1rem;
+/* ==========================================================================
+   CV PAGE
+   ========================================================================== */
+
+.cv-json {
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+}
+
+/* ==========================================================================
+   SOCIAL ICONS
+   ========================================================================== */
+
+.social-icons {
+  .fa, .fab, .fas, .svg-inline--fa {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==========================================================================
+   PAGE META
+   ========================================================================== */
+
+.page__meta {
+  font-size: 0.7rem;
+  color: var(--global-text-color-light);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   SCROLLBAR — Custom thin + subtle
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 3px;
+
+  &:hover {
+    background: rgba(128, 128, 128, 0.5);
+  }
+}
+
+/* ==========================================================================
+   MOBILE REFINEMENTS
+   ========================================================================== */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .page__title {
+    font-size: 1.35rem;
+  }
+
+  .greedy-nav .visible-links a {
+    padding: 0.5rem;
+  }
+
+  .author__urls li a {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1023px) {
+  .page__content p {
+    max-width: 65ch;
+  }
 }

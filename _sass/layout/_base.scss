@@ -16,7 +16,7 @@ body {
   padding: $masthead-height 0 0;
   padding-bottom: 9em;
   font-family: $global-font-family;
-  line-height: 1.35;
+  line-height: 1.6;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -324,18 +324,22 @@ nav {
    @-webkit-keyframes intro {
     0% {
       opacity: 0;
+      transform: translateY(6px);
     }
     100% {
       opacity: 1;
+      transform: translateY(0);
     }
   }
-  
+
   @keyframes intro {
     0% {
       opacity: 0;
+      transform: translateY(6px);
     }
     100% {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
